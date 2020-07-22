@@ -2,20 +2,21 @@
 //  MovieRow.swift
 //  Swiftui_movie
 //
-//  Created by Liem Vo on 7/7/19.
-//  Copyright © 2019 Liem Vo. All rights reserved.
+//  Created by Aji Suryawan on 03/07/20.
+//  Copyright © 2020 RPL RUS. All rights reserved.
 //
 
 import URLImage
 import SwiftUI
 
-struct MovieRow : View {
+struct MovieRowApi : View {
 	var movie: Movie
 	
 	var body: some View {
 		HStack {
-			URLImage(URL(string:  "\(BASE_IMAGE_URL)\(movie.poster_path)")!, delay: 0.25) { proxy in
+            URLImage(URL(string:  (movie.background_image))!, delay: 0.25) { proxy in
 				proxy.image.resizable()
+                    .scaledToFit()
 					.frame(width: 90, height: 120)
 				
 			}
@@ -23,24 +24,26 @@ struct MovieRow : View {
 			VStack {
 				Spacer()
 				HStack {
-					Text(movie.title)
+                    Text(movie.name)
 						.foregroundColor(.blue)
 						.lineLimit(nil)
 					Spacer()
 				}
-				HStack {
-					Text(movie.release_date).foregroundColor(.gray)
+				
+                HStack {
+                    Text(movie.released).foregroundColor(.gray)
 					Spacer()
-					Text("Rate: \(movie.vote_average.format())")
+                    Text("id: \(movie.id)")
 				}
+                 
 				HStack {
-					Text("Vote count: \(movie.vote_count)")
+                    Text("Vote count: \(movie.rating_top)")
 						.foregroundColor(.gray)
 						.lineLimit(nil)
 					Spacer()
 				}
 				HStack {
-					Text("Popularity: \(movie.popularity)")
+                    Text("Popularity: \(movie.rating)")
 						.foregroundColor(.gray)
 						.lineLimit(nil)
 					Spacer()
@@ -50,6 +53,10 @@ struct MovieRow : View {
 		}.frame(height: 130)
 	}
 }
+
+
+
+
 
 extension Float {
 	func format() -> String {

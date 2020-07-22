@@ -2,8 +2,8 @@
 //  NetworkManager.swift
 //  Swiftui_movie
 //
-//  Created by Liem Vo on 7/7/19.
-//  Copyright © 2019 Liem Vo. All rights reserved.
+//  Created by Aji Suryawan on 03/07/20.
+//  Copyright © 2020 RPL RUS. All rights reserved.
 //
 
 import Alamofire
@@ -13,15 +13,15 @@ import Combine
 class NetworkManager: ObservableObject {
 	@Published var movies = MovieList(results: [])
 	@Published var loading = false
-	private let api_key = ""
-	private let api_url_base = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key="
+	//private let api_key = "26ca623415ed476f557880b39427f773"
+	private let api_url_base = "https://api.rawg.io/api/games"
 	init() {
 		loading = true
 		loadDataByAlamofire()
 	}
 	
 	private func loadDataNormal() {
-		guard let url = URL(string: "\(api_url_base)\(api_key)") else { return }
+		guard let url = URL(string: (api_url_base)) else { return }
 		URLSession.shared.dataTask(with: url){ (data, _, _) in
 			guard let data = data else { return }
 			let movies = try! JSONDecoder().decode(MovieList.self, from: data)
@@ -33,7 +33,7 @@ class NetworkManager: ObservableObject {
 	}
 	
 	private func loadDataByAlamofire() {
-		Alamofire.request("\(api_url_base)\(api_key)")
+		Alamofire.request((api_url_base))
 			.responseJSON{ response in
 				guard let data = response.data else { return }
 				let movies = try! JSONDecoder().decode(MovieList.self, from: data)

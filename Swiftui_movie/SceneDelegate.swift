@@ -2,12 +2,13 @@
 //  SceneDelegate.swift
 //  Swiftui_movie
 //
-//  Created by Liem Vo on 7/7/19.
-//  Copyright © 2019 Liem Vo. All rights reserved.
+//  Created by Aji Suryawan on 03/07/20.
+//  Copyright © 2020 RPL RUS. All rights reserved.
 //
 
 import UIKit
 import SwiftUI
+import CoreData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	
@@ -20,9 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 		
 		// Use a UIHostingController as window root view controller
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let contentView = GameListFavTab().environment(\.managedObjectContext, context)
 		if let windowScene = scene as? UIWindowScene {
 			let window = UIWindow(windowScene: windowScene)
-			window.rootViewController = UIHostingController(rootView: ContentView())
+			window.rootViewController = UIHostingController(rootView: MainView())
+            //window.rootViewController = UIHostingController(rootView: contentView)
 			self.window = window
 			window.makeKeyAndVisible()
 		}
@@ -51,10 +56,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	}
 	
 	func sceneDidEnterBackground(_ scene: UIScene) {
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 		// Called as the scene transitions from the foreground to the background.
 		// Use this method to save data, release shared resources, and store enough scene-specific state information
 		// to restore the scene back to its current state.
 	}
+    // MARK: - Core Data stack
+
+    
 	
 	
 }

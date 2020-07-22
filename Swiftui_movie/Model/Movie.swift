@@ -9,15 +9,13 @@
 import Foundation
 
 struct Movie: Decodable, Identifiable {
-	var popularity: Float
-	var vote_count: Int
+	var rating: Float
+	var rating_top: Int
 	var id: Int
-	var vote_average: Float
-	var title: String
-	var poster_path: String
-	var original_language: String
-	var original_title: String
-	var adult: Bool
-	var overview: String
-	var release_date: String
+	//var vote_average: Float
+	var name: String
+	var background_image: String
+	var slug: String
+	var released: String
+	var tba: Bool
 }
