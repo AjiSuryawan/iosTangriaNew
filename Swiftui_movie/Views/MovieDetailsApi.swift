@@ -32,7 +32,7 @@ struct MovieDetailsApi : View {
                 .padding()
                 Spacer()
                 Text(movie.note)
-                    .foregroundColor(.black)
+                    .foregroundColor(.green)
                     .padding()
                 Spacer()
                 
