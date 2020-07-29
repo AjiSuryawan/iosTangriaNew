@@ -23,7 +23,7 @@ struct MainView: View {
             }
             .background(NavigationConfigurator { nc in
                 nc.navigationBar.barTintColor = .white
-                nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
+                nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.systemPink]
             })
         }
             .navigationViewStyle(StackNavigationViewStyle())

@@ -27,11 +27,11 @@ struct MovieRowApi : View {
                         
                         Text(movie.name)
                             .font(.title)
-                            .foregroundColor(.black)
+                            .foregroundColor(Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
                         
                         Text("Rp. "+String(movie.price))
                             .font(.headline)
-                            .foregroundColor(.black)
+                            .foregroundColor(Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
                         
                         
                     }.layoutPriority(100)

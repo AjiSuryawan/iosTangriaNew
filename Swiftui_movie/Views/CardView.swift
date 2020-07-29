@@ -29,12 +29,12 @@ struct CardView: View {
                             Text(title)
                                 .font(.title)
                                 .fontWeight(.bold)
-                                .foregroundColor(.black)
+                                .foregroundColor(Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
                             
                             Text(city)
                                 .font(.headline)
                                 .fontWeight(.bold)
-                                .foregroundColor(.black)
+                                .foregroundColor(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)))
                             
                             
                         }.layoutPriority(100)
