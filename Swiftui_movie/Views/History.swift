@@ -11,12 +11,27 @@ import SwiftUI
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct History: View {
     
-    
+     //@ObservedObject var networkManager = NetworkManagerHour()
     var body: some View {
         //NavigationView {
         VStack{
-            Text("makanan 3")
-            
+            Text("makanan ini enak")
+//            if networkManager.loading {
+//                Text("Loading ...")
+//                    .foregroundColor(Color.pink)
+//                    .bold()
+//                    .frame(maxWidth: .infinity, maxHeight: .infinity , alignment: .center)
+//            } else {
+//
+//                List(networkManager.movies.time) { movie in
+//                    RowHourOff(movie: movie)
+//                    //                    NavigationLink(destination: MovieDetailsApi(movie: movie)){
+//                    //                        MovieRowApi(movie: movie)
+//                    //                    }
+//                }.onAppear {
+//                    UITableView.appearance().separatorStyle = .none
+//                }
+//            }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(.white))
