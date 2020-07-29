@@ -30,6 +30,7 @@
 		4F6B9E0224B20632003DAB16 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B9E0124B20632003DAB16 /* TabBar.swift */; };
 		4F6B9E0424B20650003DAB16 /* ShowModalTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B9E0324B20650003DAB16 /* ShowModalTabBarItem.swift */; };
 		4F6B9E0624B20673003DAB16 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B9E0524B20673003DAB16 /* MainView.swift */; };
+		4F8B083424D1B37700C34D9B /* app_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8B083324D1B37700C34D9B /* app_logo.png */; };
 		4F9AD8AC24D18FB8004A393B /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AD8AB24D18FB8004A393B /* History.swift */; };
 		4FBEC65724C2C89700DE3240 /* GameListFavTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEC65624C2C89600DE3240 /* GameListFavTab.swift */; };
 		4FFFCD8E24C7C51600EF880F /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFCD8D24C7C51600EF880F /* UserSettings.swift */; };
@@ -59,6 +60,7 @@
 		4F6B9E0124B20632003DAB16 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		4F6B9E0324B20650003DAB16 /* ShowModalTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowModalTabBarItem.swift; sourceTree = "<group>"; };
 		4F6B9E0524B20673003DAB16 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4F8B083324D1B37700C34D9B /* app_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_logo.png; path = ../../../app_logo.png; sourceTree = "<group>"; };
 		4F9AD8AB24D18FB8004A393B /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		4FBEC65624C2C89600DE3240 /* GameListFavTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListFavTab.swift; sourceTree = "<group>"; };
 		4FFFCD8D24C7C51600EF880F /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				44E5562122D15E690000B95D /* Assets.xcassets */,
 				44E5562622D15E690000B95D /* LaunchScreen.storyboard */,
 				44E5562922D15E690000B95D /* Info.plist */,
+				4F8B083324D1B37700C34D9B /* app_logo.png */,
 				44E5562322D15E690000B95D /* Preview Content */,
 			);
 			path = Swiftui_movie;
@@ -223,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F8B083424D1B37700C34D9B /* app_logo.png in Resources */,
 				44E5562822D15E690000B95D /* LaunchScreen.storyboard in Resources */,
 				44E5562522D15E690000B95D /* Preview Assets.xcassets in Resources */,
 				44E5562222D15E690000B95D /* Assets.xcassets in Resources */,
