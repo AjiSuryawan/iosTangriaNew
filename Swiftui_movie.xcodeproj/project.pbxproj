@@ -36,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		44E5561822D15E670000B95D /* MyGameDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGameDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44E5561822D15E670000B95D /* Tangria Spa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tangria Spa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E5561B22D15E670000B95D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E5561D22D15E670000B95D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		44E5562122D15E690000B95D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		44E5561922D15E670000B95D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				44E5561822D15E670000B95D /* MyGameDB.app */,
+				44E5561822D15E670000B95D /* Tangria Spa.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 				443AA87323741DD400DD7E91 /* Alamofire */,
 			);
 			productName = Swiftui_movie;
-			productReference = 44E5561822D15E670000B95D /* MyGameDB.app */;
+			productReference = 44E5561822D15E670000B95D /* Tangria Spa.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -402,7 +402,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rus.Swiftui-movie";
-				PRODUCT_NAME = MyGameDB;
+				PRODUCT_NAME = "Tangria Spa";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,7 +422,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rus.Swiftui-movie";
-				PRODUCT_NAME = MyGameDB;
+				PRODUCT_NAME = "Tangria Spa";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
