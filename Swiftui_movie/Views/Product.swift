@@ -17,17 +17,18 @@ struct Product: View {
         VStack {
             if networkManager.loading {
                 Text("Loading ...")
-                    .foregroundColor(Color.black)
-                .bold()
+                    .foregroundColor(Color.pink)
+                    .bold()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity , alignment: .center)
             } else {
                 
                 List(networkManager.movies.result) { movie in
                     MovieRowApi(movie: movie)
-//                    NavigationLink(destination: MovieDetailsApi(movie: movie)){
-//                        MovieRowApi(movie: movie)
-//                    }
+                    //                    NavigationLink(destination: MovieDetailsApi(movie: movie)){
+                    //                        MovieRowApi(movie: movie)
+                    //                    }
                 }.onAppear {
-                 UITableView.appearance().separatorStyle = .none
+                    UITableView.appearance().separatorStyle = .none
                 }
             }
         }
