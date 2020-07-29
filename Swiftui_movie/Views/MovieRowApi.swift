@@ -27,12 +27,10 @@ struct MovieRowApi : View {
                         
                         Text(movie.name)
                             .font(.title)
-                            .fontWeight(.bold)
                             .foregroundColor(.black)
                         
-                        Text(String(movie.price))
+                        Text("Rp. "+String(movie.price))
                             .font(.headline)
-                            .fontWeight(.bold)
                             .foregroundColor(.black)
                         
                         
