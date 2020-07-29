@@ -14,7 +14,7 @@ struct TabBarItem: View {
     let imageName: String
     let paddingEdges: Edge.Set
     let tab: Tab
-    
+    //Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
     var body: some View {
         VStack(spacing:0) {
             Image(systemName: imageName)
@@ -22,8 +22,8 @@ struct TabBarItem: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(5)
                 .frame(width: 40, height: 40, alignment: .center)
-                .background(Color(self.currentView == tab ? .blue : .white).opacity(0.2))
-                .foregroundColor(Color(self.currentView == tab ? .white : .blue))
+                .background(Color(self.currentView == tab ? #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1) : .white).opacity(0.5))
+                .foregroundColor(Color(self.currentView == tab ? .white : #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)))
                 .cornerRadius(6)
         }
         .frame(width: 100, height: 50)

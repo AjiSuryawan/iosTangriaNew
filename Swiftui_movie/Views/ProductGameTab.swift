@@ -11,48 +11,29 @@ import SwiftUI
 
 struct ProductGameTab: View {
     @ObservedObject var networkManager = NetworkManager()
-    /*
-    var body: some View {
-        NavigationView {
-            VStack {
-                if networkManager.loading {
-                    Text("Loading ...")
-                } else {
-                    List(networkManager.movies.results) { movie in
-                        NavigationLink(destination: MovieDetails(movie: movie)){
-                            MovieRow(movie: movie)
-                        }
-                    }
-                }
-            }
-            .navigationBarTitle(Text("Movies"))
-        }
-    }
-    */
+    
     
     var body: some View {
         VStack {
-            if networkManager.loading {
-                Text("Loading ...")
-                    .foregroundColor(Color.black)
-                .bold()
-            } else {
-                List(networkManager.movies.results) { movie in
-                    NavigationLink(destination: MovieDetailsApi(movie: movie)){
-                        MovieRowApi(movie: movie)
+                ScrollView {
+                    
+                    ForEach(places, id: \.self) { place in
+                        
+                        CardView(image: place.image, title: place.title, city: place.city, des: place.desc)
+                        
                     }
                 }
-            }
+            
+            
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(.white))
-            
-        .navigationBarTitle("Produk", displayMode: .inline)
-//        .navigationBarItems(trailing:
-//            NavigationLink(destination: ProfileView()) {
-//                Text("cari").foregroundColor(.white)
-//            }.buttonStyle(PlainButtonStyle())
-//        )
+        .navigationBarTitle("Our Product",displayMode: .inline)
+        .navigationBarItems(trailing:
+            NavigationLink(destination: ProfileView()) {
+                Text("").foregroundColor(.white)
+            }.buttonStyle(PlainButtonStyle())
+        )
     }
     
 }

@@ -16,9 +16,10 @@ struct CurrentScreen: View {
         VStack {
             if self.currentView == .Tab1 {
                 ProductGameTab()
+            }else if self.currentView == .Tab3 {
+                History()
             } else {
-                //Screen2()
-                GameListFavTab().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+                GameListFavTab()
                 
             }
         }

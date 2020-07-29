@@ -15,14 +15,15 @@ struct TabBar: View {
 
     var body: some View {
         HStack {
-            TabBarItem(currentView: self.$currentView, imageName: "folder.circle", paddingEdges: .leading, tab: .Tab1)
+            TabBarItem(currentView: self.$currentView, imageName: "star", paddingEdges: .leading, tab: .Tab1)
             Spacer()
-            ShowModalTabBarItem(radius: 55) { self.showModal.toggle() }
+            //ShowModalTabBarItem(radius: 55) { self.showModal.toggle() }
+            TabBarItem(currentView: self.$currentView, imageName: "calendar", paddingEdges: .trailing, tab: .Tab3)
             Spacer()
-            TabBarItem(currentView: self.$currentView, imageName: "heart.fill", paddingEdges: .trailing, tab: .Tab2)
+            TabBarItem(currentView: self.$currentView, imageName: "person", paddingEdges: .trailing, tab: .Tab2)
         }
         .frame(minHeight: 70)
-        .background(Color.blue)
+        .background(Color.white)
         
     }
 }

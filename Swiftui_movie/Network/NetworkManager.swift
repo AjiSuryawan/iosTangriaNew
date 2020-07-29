@@ -11,10 +11,11 @@ import Foundation
 import Combine
 
 class NetworkManager: ObservableObject {
-	@Published var movies = MovieList(results: [])
+	@Published var movies = MovieList(result: [])
 	@Published var loading = false
 	//private let api_key = "26ca623415ed476f557880b39427f773"
-	private let api_url_base = "https://api.rawg.io/api/games"
+	//private let api_url_base = "https://api.rawg.io/api/games"
+    private let api_url_base = "https://api-ios.admin.tangriaspa.com/api/product/ala_carte_treatment"
 	init() {
 		loading = true
 		loadDataByAlamofire()

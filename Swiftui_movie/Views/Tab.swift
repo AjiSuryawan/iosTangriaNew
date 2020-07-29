@@ -10,4 +10,5 @@ import Foundation
 enum Tab {
     case Tab1
     case Tab2
+    case Tab3
 }

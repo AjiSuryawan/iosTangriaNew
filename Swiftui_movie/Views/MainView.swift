@@ -22,8 +22,8 @@ struct MainView: View {
                 TabBar(currentView: self.$currentView, showModal: self.$showModal)
             }
             .background(NavigationConfigurator { nc in
-                nc.navigationBar.barTintColor = .blue
-                nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
+                nc.navigationBar.barTintColor = .white
+                nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
             })
         }
             .navigationViewStyle(StackNavigationViewStyle())
