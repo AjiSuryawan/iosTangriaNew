@@ -45,6 +45,8 @@ struct MovieRowApi : View {
             NavigationLink(destination: MovieDetailsApi(movie: movie)) {
                     EmptyView()
             }.buttonStyle(PlainButtonStyle())
+            
+            
         }
     }
 }

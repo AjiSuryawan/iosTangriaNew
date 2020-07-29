@@ -46,6 +46,8 @@ struct NavigationConfigurator: UIViewControllerRepresentable {
 
 }
 
+
+
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()

@@ -17,9 +17,10 @@ struct History: View {
         VStack{
             Text("makanan 3")
             
-        }        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-            .background(Color(.white))
-            .navigationBarTitle("History Booking",displayMode: .inline)
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .background(Color(.white))
+        .navigationBarTitle("History Booking",displayMode: .inline)
         
         
     }
