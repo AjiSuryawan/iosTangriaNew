@@ -27,8 +27,6 @@ struct MainView: View {
             })
         }
             .navigationViewStyle(StackNavigationViewStyle())
-        
-        //.navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: self.$showModal) { ProfileView() }
         
     }
