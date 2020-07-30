@@ -9,7 +9,7 @@
 import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
-struct History: View {
+struct DayOff: View {
     
     @ObservedObject var networkManager = NetworkManagerHour()
     var body: some View {
@@ -37,8 +37,8 @@ struct History: View {
     }
 }
 
-struct History_Previews: PreviewProvider {
+struct DayOff_Previews: PreviewProvider {
     static var previews: some View {
-        History()
+        DayOff()
     }
 }

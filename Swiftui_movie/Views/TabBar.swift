@@ -18,7 +18,7 @@ struct TabBar: View {
             TabBarItem(currentView: self.$currentView, imageName: "star", paddingEdges: .leading, tab: .Tab1)
             Spacer()
             //ShowModalTabBarItem(radius: 55) { self.showModal.toggle() }
-            TabBarItem(currentView: self.$currentView, imageName: "calendar", paddingEdges: .trailing, tab: .Tab3)
+            TabBarItem(currentView: self.$currentView, imageName: "calendar.badge.minus", paddingEdges: .trailing, tab: .Tab3)
             Spacer()
             TabBarItem(currentView: self.$currentView, imageName: "person", paddingEdges: .trailing, tab: .Tab2)
         }
