@@ -28,7 +28,7 @@ struct ProductGameTab: View {
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(.white))
-        .navigationBarTitle("our product",displayMode: .inline)
+        .navigationBarTitle("Our Product",displayMode: .inline)
         .navigationBarItems(trailing:
             NavigationLink(destination: ProfileView()) {
                 Text("").foregroundColor(.white)
