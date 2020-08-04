@@ -26,7 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //let contentView = GameListFavTab().environment(\.managedObjectContext, context)
 		if let windowScene = scene as? UIWindowScene {
 			let window = UIWindow(windowScene: windowScene)
-			window.rootViewController = UIHostingController(rootView: MainView())
+            window.rootViewController = UIHostingController(rootView: SplashScreen())
+			//window.rootViewController = UIHostingController(rootView: MainView())
             //window.rootViewController = UIHostingController(rootView: contentView)
 			self.window = window
 			window.makeKeyAndVisible()
