@@ -43,7 +43,7 @@ struct CardView: View {
                             Text(city)
                                 .font(.headline)
                                 .fontWeight(.bold)
-                                .foregroundColor(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)))
+                                .foregroundColor(Color(#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
                             
                             
                         }.layoutPriority(100)
