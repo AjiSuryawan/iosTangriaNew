@@ -16,7 +16,7 @@ struct Product: View {
         VStack {
             if networkManager.loading {
                 
-                Text("Loading  +")
+                Text("Loading ...")
                     .foregroundColor(Color.pink)
                     .bold()
                     .frame(maxWidth: .infinity, maxHeight: .infinity , alignment: .center)
