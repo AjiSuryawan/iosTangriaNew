@@ -12,16 +12,16 @@ import SwiftUI
 struct Product: View {
     @ObservedObject var networkManager = NetworkManager()
     
-    
     var body: some View {
         VStack {
             if networkManager.loading {
-                Text("Loading ...")
+                
+                Text("Loading  +")
                     .foregroundColor(Color.pink)
                     .bold()
                     .frame(maxWidth: .infinity, maxHeight: .infinity , alignment: .center)
             } else {
-                
+
                 List(networkManager.movies.result) { movie in
                     MovieRowApi(movie: movie)
                     //                    NavigationLink(destination: MovieDetailsApi(movie: movie)){

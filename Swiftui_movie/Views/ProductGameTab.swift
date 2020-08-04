@@ -10,21 +10,13 @@ import Foundation
 import SwiftUI
 
 struct ProductGameTab: View {
-    @ObservedObject var networkManager = NetworkManager()
-    
-    
     var body: some View {
         VStack {
-                ScrollView {
-                    
-                    ForEach(places, id: \.self) { place in
-                        
-                        CardView(image: place.image, title: place.title, city: place.city, des: place.desc)
-                        
-                    }
+            ScrollView {
+                ForEach(places, id: \.self) { place in
+                    CardView(image: place.image, title: place.title, city: place.city, des: place.desc , urlspa: place.urlspa)
                 }
-            
-            
+            }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(.white))

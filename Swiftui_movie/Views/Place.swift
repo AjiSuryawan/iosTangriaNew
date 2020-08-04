@@ -15,14 +15,15 @@ struct Place: Hashable {
     let title: String
     let city: String
     let desc:String
+    let urlspa : String
     
 }
 
 
 let places = [
-    Place(image: "spa1", title: "Package Treadment", city: "Tangria", desc: ""),
+    Place(image: "spa1", title: "Package Treadment", city: "Tangria", desc: "" , urlspa: "api/product/package_treatment"),
     
-    Place(image: "spa1", title: "Ala Carte Treadment", city: "Tangria", desc: "")
+    Place(image: "spa1", title: "Ala Carte Treadment", city: "Tangria", desc: "" , urlspa: "api/product/ala_carte_treatment")
     
     
 ]

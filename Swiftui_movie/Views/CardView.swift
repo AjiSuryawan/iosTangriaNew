@@ -14,10 +14,19 @@ struct CardView: View {
     var title: String
     var city: String
     var des: String
+    var urlspa : String
     
     var body: some View {
         ZStack{
-            NavigationLink(destination: Product()){
+            NavigationLink(destination: {
+                VStack{
+                    if title.contains("Package Treadment") {
+                        Product()
+                    } else {
+                        Product2()
+                    }
+                }
+            }()){
                 VStack {
                     Image(image)
                         .resizable()
@@ -54,7 +63,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(image: "redfort", title: "The Red Fort", city: "Delhi", des: "Established  as Shahjahanabad in 1648, The Red Fort was known as the capital of the Mughal Empire in India. Its construction is attributed to Shah Jahan who also built the famous Taj Mahal in Agra, and was also known by the name Quila Mubarak and remained the residence of the Mughal Imperial family for nearly 20 decades.")
+        CardView(image: "redfort", title: "The Red Fort", city: "Delhi", des: "Established  as Shahjahanabad in 1648, The Red Fort was known as the capital of the Mughal Empire in India. Its construction is attributed to Shah Jahan who also built the famous Taj Mahal in Agra, and was also known by the name Quila Mubarak and remained the residence of the Mughal Imperial family for nearly 20 decades." , urlspa: "")
     }
 }
 
