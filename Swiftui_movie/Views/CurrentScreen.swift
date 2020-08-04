@@ -19,7 +19,7 @@ struct CurrentScreen: View {
             }else if self.currentView == .Tab3 {
                 DayOff()
             } else {
-                GameListFavTab()
+                CustomerProfileTab()
                 
             }
         }

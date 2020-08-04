@@ -24,7 +24,7 @@
 		4F13269824D0817700C644CC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13269724D0817700C644CC /* CardView.swift */; };
 		4F15750624D329B80008E249 /* HistoryBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F15750524D329B80008E249 /* HistoryBooking.swift */; };
 		4F210A3024D91AAD005B4658 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F210A2F24D91AAD005B4658 /* SplashScreen.swift */; };
-		4F210A3224D91B52005B4658 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F210A3124D91B52005B4658 /* Loading.swift */; };
+		4F210A3224D91B52005B4658 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F210A3124D91B52005B4658 /* Login.swift */; };
 		4F6B9DF424B2054A003DAB16 /* ProductGameTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B9DF324B2054A003DAB16 /* ProductGameTab.swift */; };
 		4F6B9DF824B20592003DAB16 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B9DF724B20592003DAB16 /* Tab.swift */; };
 		4F6B9DFC24B205D3003DAB16 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B9DFB24B205D3003DAB16 /* ProfileView.swift */; };
@@ -41,7 +41,7 @@
 		4FAAEBC624D1D7BB00BC5358 /* HourOffList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAEBC524D1D7BB00BC5358 /* HourOffList.swift */; };
 		4FAAEBC824D1D7F600BC5358 /* houroff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAEBC724D1D7F600BC5358 /* houroff.swift */; };
 		4FAAEBCA24D1D94100BC5358 /* RowHourOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAEBC924D1D94000BC5358 /* RowHourOff.swift */; };
-		4FBEC65724C2C89700DE3240 /* GameListFavTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEC65624C2C89600DE3240 /* GameListFavTab.swift */; };
+		4FBEC65724C2C89700DE3240 /* CustomerProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEC65624C2C89600DE3240 /* CustomerProfileTab.swift */; };
 		4FFFCD8E24C7C51600EF880F /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFCD8D24C7C51600EF880F /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +63,7 @@
 		4F13269724D0817700C644CC /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4F15750524D329B80008E249 /* HistoryBooking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryBooking.swift; sourceTree = "<group>"; };
 		4F210A2F24D91AAD005B4658 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		4F210A3124D91B52005B4658 /* Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		4F210A3124D91B52005B4658 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		4F6B9DF324B2054A003DAB16 /* ProductGameTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGameTab.swift; sourceTree = "<group>"; };
 		4F6B9DF724B20592003DAB16 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		4F6B9DFB24B205D3003DAB16 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		4FAAEBC524D1D7BB00BC5358 /* HourOffList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourOffList.swift; sourceTree = "<group>"; };
 		4FAAEBC724D1D7F600BC5358 /* houroff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = houroff.swift; sourceTree = "<group>"; };
 		4FAAEBC924D1D94000BC5358 /* RowHourOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowHourOff.swift; sourceTree = "<group>"; };
-		4FBEC65624C2C89600DE3240 /* GameListFavTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListFavTab.swift; sourceTree = "<group>"; };
+		4FBEC65624C2C89600DE3240 /* CustomerProfileTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerProfileTab.swift; sourceTree = "<group>"; };
 		4FFFCD8D24C7C51600EF880F /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +110,7 @@
 		4490CD2623775AD200E9BC83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4F210A3124D91B52005B4658 /* Loading.swift */,
+				4F210A3124D91B52005B4658 /* Login.swift */,
 				4F210A2F24D91AAD005B4658 /* SplashScreen.swift */,
 				4F74823D24D90E5F005E6264 /* Product2.swift */,
 				4F15750524D329B80008E249 /* HistoryBooking.swift */,
@@ -118,7 +118,7 @@
 				4F13269724D0817700C644CC /* CardView.swift */,
 				4F13269324D080DF00C644CC /* Place.swift */,
 				4FFFCD8D24C7C51600EF880F /* UserSettings.swift */,
-				4FBEC65624C2C89600DE3240 /* GameListFavTab.swift */,
+				4FBEC65624C2C89600DE3240 /* CustomerProfileTab.swift */,
 				44E5563B22D179BA0000B95D /* MovieDetailsApi.swift */,
 				44E5563622D164D80000B95D /* MovieRowApi.swift */,
 				4F6B9DF324B2054A003DAB16 /* ProductGameTab.swift */,
@@ -289,11 +289,11 @@
 				4F6B9E0024B20615003DAB16 /* TabBarItem.swift in Sources */,
 				4F6B9E0224B20632003DAB16 /* TabBar.swift in Sources */,
 				4F74823E24D90E5F005E6264 /* Product2.swift in Sources */,
-				4F210A3224D91B52005B4658 /* Loading.swift in Sources */,
+				4F210A3224D91B52005B4658 /* Login.swift in Sources */,
 				4F6B9E0624B20673003DAB16 /* MainView.swift in Sources */,
 				4F6B9DF824B20592003DAB16 /* Tab.swift in Sources */,
 				44E5563322D1602C0000B95D /* MovieList.swift in Sources */,
-				4FBEC65724C2C89700DE3240 /* GameListFavTab.swift in Sources */,
+				4FBEC65724C2C89700DE3240 /* CustomerProfileTab.swift in Sources */,
 				4F6B9DF424B2054A003DAB16 /* ProductGameTab.swift in Sources */,
 				4F13269824D0817700C644CC /* CardView.swift in Sources */,
 				4FFFCD8E24C7C51600EF880F /* UserSettings.swift in Sources */,
