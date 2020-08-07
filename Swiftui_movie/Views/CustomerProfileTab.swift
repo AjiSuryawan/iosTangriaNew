@@ -80,8 +80,13 @@ struct CustomerProfileTab: View {
                         UserDefaults.standard.removeObject(forKey: "desc")
                         self.isPresented.toggle()
                     }) {
-                        
-                        LogoutButtonContent()
+                        if self.userSettings.email.isEmpty || self.userSettings.email == ""{
+                            LoginButtonContent()
+                            
+                        }else{
+
+                            LogoutButtonContent()
+                        }
                         
                     }
                 }
@@ -109,6 +114,8 @@ struct CustomerProfileTab: View {
                 .cornerRadius(35.0)
         }
     }
+    
+   
     
     struct LoginButtonContent: View {
         var body: some View {
