@@ -4,7 +4,6 @@ import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct CustomerProfileTab: View {
-    @State private var isAlert = false
     @ObservedObject var userSettings = UserSettings()
     var body: some View {
         VStack{
@@ -44,7 +43,7 @@ struct CustomerProfileTab: View {
                                 VStack(alignment: .center, spacing: 0) {
                                     Text("History Booking")
                                         .foregroundColor(Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
-                                    .frame(maxWidth: .infinity)
+                                        .frame(maxWidth: .infinity)
                                 }.layoutPriority(100)
                                 Spacer()
                             }.padding()
@@ -62,7 +61,7 @@ struct CustomerProfileTab: View {
                                     
                                     Text("Medical Questioner")
                                         .foregroundColor(Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
-                                    .frame(maxWidth: .infinity)
+                                        .frame(maxWidth: .infinity)
                                     
                                 }.layoutPriority(100)
                                 
@@ -75,20 +74,18 @@ struct CustomerProfileTab: View {
                     }
                     
                     Button(action: {
-                        self.isAlert = true
                         UserDefaults.standard.removeObject(forKey: "username")
                         UserDefaults.standard.removeObject(forKey: "email")
                         UserDefaults.standard.removeObject(forKey: "desc")
                     }) {
+                        
                         LogoutButtonContent()
+                        
                     }
                 }
-            }
-            
-            if self.isAlert{
-                    SplashScreen()
                 
             }
+            
             
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
@@ -98,7 +95,19 @@ struct CustomerProfileTab: View {
     
     struct LogoutButtonContent: View {
         var body: some View {
-            Text("log out")
+            Text("Log Out")
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 220, height: 60)
+                .background(Color.black)
+                .cornerRadius(35.0)
+        }
+    }
+    
+    struct LoginButtonContent: View {
+        var body: some View {
+            Text("Login")
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding()
