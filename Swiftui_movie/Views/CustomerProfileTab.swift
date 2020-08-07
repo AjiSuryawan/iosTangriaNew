@@ -94,6 +94,7 @@ struct CustomerProfileTab: View {
             .sheet(isPresented: $isPresented) {
                 LoginM(onComplete: { title in
                     self.isPresented = false
+                    print("masuk hasil modal")
                 })
             }
             
