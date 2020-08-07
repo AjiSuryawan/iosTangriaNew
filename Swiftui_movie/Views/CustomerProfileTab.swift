@@ -4,6 +4,7 @@ import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct CustomerProfileTab: View {
+    @State var isPresented = false
     @ObservedObject var userSettings = UserSettings()
     var body: some View {
         VStack{
@@ -77,15 +78,19 @@ struct CustomerProfileTab: View {
                         UserDefaults.standard.removeObject(forKey: "username")
                         UserDefaults.standard.removeObject(forKey: "email")
                         UserDefaults.standard.removeObject(forKey: "desc")
+                        self.isPresented.toggle()
                     }) {
                         
                         LogoutButtonContent()
                         
                     }
                 }
-                
             }
-            
+            .sheet(isPresented: $isPresented) {
+                LoginM(onComplete: { title in
+                    self.isPresented = false
+                })
+            }
             
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
