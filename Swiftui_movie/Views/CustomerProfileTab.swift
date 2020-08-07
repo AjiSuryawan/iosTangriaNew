@@ -4,6 +4,8 @@ import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct CustomerProfileTab: View {
+    @State private var currentView: Tab = .Tab1
+    @State private var showModal: Bool = false
     @State var isPresented = false
     @ObservedObject var userSettings = UserSettings()
     var body: some View {
