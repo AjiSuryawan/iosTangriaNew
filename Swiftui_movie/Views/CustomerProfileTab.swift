@@ -4,6 +4,7 @@ import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct CustomerProfileTab: View {
+    @State private var activateLink: Bool = false
     @State private var currentView: Tab = .Tab1
     @State private var showModal: Bool = false
     @State var isPresented = false
@@ -76,41 +77,31 @@ struct CustomerProfileTab: View {
                         .padding()
                     }
                     
-                    NavigationLink(destination: LoginM()) {
-                        if self.userSettings.email.isEmpty || self.userSettings.email == ""{
-                            LoginButtonContent()
-                            
-                        }else{
-                            
-                            LogoutButtonContent()
-                        }
-                    }
-                    
-                    //                    Button(action: {
-                    //                        UserDefaults.standard.removeObject(forKey: "username")
-                    //                        UserDefaults.standard.removeObject(forKey: "email")
-                    //                        UserDefaults.standard.removeObject(forKey: "desc")
-                    //                        self.isPresented.toggle()
-                    //                    }) {
-                    //                        if self.userSettings.email.isEmpty || self.userSettings.email == ""{
-                    //                            LoginButtonContent()
-                    //
-                    //                        }else{
-                    //
-                    //                            LogoutButtonContent()
+//                    NavigationLink(destination: LoginM()) {
+//                        if self.userSettings.email.isEmpty || self.userSettings.email == ""{
+//                            LoginButtonContent()
+//
+//                        }else{
+//
+//                            LogoutButtonContent()
                     //                        }
-                    //
                     //                    }
+                    NavigationLink(destination: LoginM(), isActive: $activateLink,
+                    label: { EmptyView() })
+                    Button(action: {
+                        
+                        self.isPresented=true
+                    }) {
+                        LogoutButtonContent()
+                    }
+                }
+                .alert(isPresented: $isPresented) {
+                    Alert(title: Text("Logout"), message: Text("Are you sure want to Logout ?"), primaryButton: .destructive(Text("yes")) {
+                        self.unpairAndSetDefaultDeviceInformation()
+                        }, secondaryButton: .cancel())
                 }
             }
-            //.sheet(isPresented: $isPresented) {
-            //LoginM()
-            //                LoginM(onComplete: { title in
-            //                    self.isPresented = false
-            //                    print("masuk hasil modal")
-            //
-            //                })
-            //}
+            
             
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
@@ -118,6 +109,12 @@ struct CustomerProfileTab: View {
         .navigationBarTitle("Customer Profile",displayMode: .inline)
     }
     
+    func unpairAndSetDefaultDeviceInformation() {
+        // YOUR CODE IS HERE
+        DispatchQueue.main.async {
+            self.activateLink = true
+        }
+    }
     
     
     struct LogoutButtonContent: View {
