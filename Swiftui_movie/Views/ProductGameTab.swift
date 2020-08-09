@@ -21,11 +21,11 @@ struct ProductGameTab: View {
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(.white))
         .navigationBarTitle("Our Product",displayMode: .inline)
-        .navigationBarItems(trailing:
-            NavigationLink(destination: ProfileView()) {
-                Text("").foregroundColor(.white)
-            }.buttonStyle(PlainButtonStyle())
-        )
+//        .navigationBarItems(trailing:
+//            NavigationLink(destination: ProfileView()) {
+//                Text("").foregroundColor(.white)
+//            }.buttonStyle(PlainButtonStyle())
+//        )
     }
     
 }
