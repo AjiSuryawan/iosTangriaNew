@@ -13,7 +13,6 @@ struct MainView: View {
     @State private var currentView: Tab = .Tab1
     @State private var showModal: Bool = false
     
-    
 
     var body: some View {
         NavigationView {
@@ -25,6 +24,7 @@ struct MainView: View {
                 nc.navigationBar.barTintColor = .white
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.systemPink]
             })
+            
         }
             .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: self.$showModal) { ProfileView() }
