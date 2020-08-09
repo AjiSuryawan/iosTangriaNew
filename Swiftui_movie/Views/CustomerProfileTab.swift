@@ -76,35 +76,49 @@ struct CustomerProfileTab: View {
                         .padding()
                     }
                     
-                    Button(action: {
-                        UserDefaults.standard.removeObject(forKey: "username")
-                        UserDefaults.standard.removeObject(forKey: "email")
-                        UserDefaults.standard.removeObject(forKey: "desc")
-                        self.isPresented.toggle()
-                    }) {
+                    NavigationLink(destination: LoginM()) {
                         if self.userSettings.email.isEmpty || self.userSettings.email == ""{
                             LoginButtonContent()
                             
                         }else{
-
+                            
                             LogoutButtonContent()
                         }
-                        
                     }
+                    
+                    //                    Button(action: {
+                    //                        UserDefaults.standard.removeObject(forKey: "username")
+                    //                        UserDefaults.standard.removeObject(forKey: "email")
+                    //                        UserDefaults.standard.removeObject(forKey: "desc")
+                    //                        self.isPresented.toggle()
+                    //                    }) {
+                    //                        if self.userSettings.email.isEmpty || self.userSettings.email == ""{
+                    //                            LoginButtonContent()
+                    //
+                    //                        }else{
+                    //
+                    //                            LogoutButtonContent()
+                    //                        }
+                    //
+                    //                    }
                 }
             }
-            .sheet(isPresented: $isPresented) {
-                LoginM(onComplete: { title in
-                    self.isPresented = false
-                    print("masuk hasil modal")
-                })
-            }
+            //.sheet(isPresented: $isPresented) {
+            //LoginM()
+            //                LoginM(onComplete: { title in
+            //                    self.isPresented = false
+            //                    print("masuk hasil modal")
+            //
+            //                })
+            //}
             
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(.white))
         .navigationBarTitle("Customer Profile",displayMode: .inline)
     }
+    
+    
     
     struct LogoutButtonContent: View {
         var body: some View {
@@ -118,7 +132,7 @@ struct CustomerProfileTab: View {
         }
     }
     
-   
+    
     
     struct LoginButtonContent: View {
         var body: some View {
