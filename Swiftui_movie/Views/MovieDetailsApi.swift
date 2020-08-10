@@ -17,7 +17,12 @@ struct MovieDetailsApi : View {
             ScrollView{
                 VStack{
                     VStack {
-                        URLImage(URL(string:  ("http://admin.tangriaspa.com/"+movie.image))!, delay: 0.25) { proxy in
+                        URLImage(URL(string:  ("http://admin.tangriaspa.com/"+movie.image))!, placeholder: { _ in
+                            Image("spa1")             // Use different image for the placeholder
+                                .resizable()                        // Make it resizable
+                                .aspectRatio(contentMode: .fit)
+                                .padding(.bottom)
+                        }) { proxy in
                             proxy.image
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
