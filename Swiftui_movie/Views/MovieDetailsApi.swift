@@ -10,6 +10,7 @@ import SwiftUI
 import URLImage
 import CoreData
 struct MovieDetailsApi : View {
+    @State var isPresented = false
     var movie: Movie
     var body: some View {
         ZStack{
@@ -42,6 +43,7 @@ struct MovieDetailsApi : View {
                         .padding()
                     Spacer()
                     Button(action: {
+                        self.isPresented.toggle()
                         print("Button action")
                     }) {
                         Text("Book Now")
@@ -55,6 +57,8 @@ struct MovieDetailsApi : View {
                             .cornerRadius(15.0)
                     }.padding()
                     Spacer()
+                }.sheet(isPresented: $isPresented) {
+                    ListTime()
                 }
             }
             
