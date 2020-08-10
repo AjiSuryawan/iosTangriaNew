@@ -45,6 +45,9 @@
 		4FAAEBC824D1D7F600BC5358 /* houroff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAEBC724D1D7F600BC5358 /* houroff.swift */; };
 		4FAAEBCA24D1D94100BC5358 /* RowHourOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAEBC924D1D94000BC5358 /* RowHourOff.swift */; };
 		4FBEC65724C2C89700DE3240 /* CustomerProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEC65624C2C89600DE3240 /* CustomerProfileTab.swift */; };
+		4FC7C72E24E177CD0073250C /* availabletime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC7C72D24E177CD0073250C /* availabletime.swift */; };
+		4FC7C73024E17A2B0073250C /* atlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC7C72F24E17A2B0073250C /* atlist.swift */; };
+		4FC7C73224E17AC70073250C /* NetworkManagerAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC7C73124E17AC70073250C /* NetworkManagerAT.swift */; };
 		4FFFCD8E24C7C51600EF880F /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFCD8D24C7C51600EF880F /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +90,9 @@
 		4FAAEBC724D1D7F600BC5358 /* houroff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = houroff.swift; sourceTree = "<group>"; };
 		4FAAEBC924D1D94000BC5358 /* RowHourOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowHourOff.swift; sourceTree = "<group>"; };
 		4FBEC65624C2C89600DE3240 /* CustomerProfileTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerProfileTab.swift; sourceTree = "<group>"; };
+		4FC7C72D24E177CD0073250C /* availabletime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = availabletime.swift; sourceTree = "<group>"; };
+		4FC7C72F24E17A2B0073250C /* atlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = atlist.swift; sourceTree = "<group>"; };
+		4FC7C73124E17AC70073250C /* NetworkManagerAT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerAT.swift; sourceTree = "<group>"; };
 		4FFFCD8D24C7C51600EF880F /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +112,7 @@
 		4490CD2523775AC100E9BC83 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4FC7C73124E17AC70073250C /* NetworkManagerAT.swift */,
 				4F74823B24D90E29005E6264 /* NetworkManagerAlacarte.swift */,
 				4FAAEBC324D1D6E800BC5358 /* NetworkManagerHour.swift */,
 				44E5563422D1605D0000B95D /* NetworkManager.swift */,
@@ -188,6 +195,8 @@
 		44E5562F22D15E920000B95D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4FC7C72F24E17A2B0073250C /* atlist.swift */,
+				4FC7C72D24E177CD0073250C /* availabletime.swift */,
 				4FAAEBC724D1D7F600BC5358 /* houroff.swift */,
 				4FAAEBC524D1D7BB00BC5358 /* HourOffList.swift */,
 				44E5563022D15F3F0000B95D /* Movie.swift */,
@@ -293,6 +302,7 @@
 				4FAAEBC824D1D7F600BC5358 /* houroff.swift in Sources */,
 				4F13269424D080DF00C644CC /* Place.swift in Sources */,
 				4FAAEBC624D1D7BB00BC5358 /* HourOffList.swift in Sources */,
+				4FC7C73024E17A2B0073250C /* atlist.swift in Sources */,
 				4F9AD8AC24D18FB8004A393B /* DayOff.swift in Sources */,
 				4F12637224D970890091A63A /* HistoryBooking.swift in Sources */,
 				44E5563722D164D80000B95D /* MovieRowApi.swift in Sources */,
@@ -304,7 +314,9 @@
 				4F6B9E0624B20673003DAB16 /* MainView.swift in Sources */,
 				4F6B9DF824B20592003DAB16 /* Tab.swift in Sources */,
 				44E5563322D1602C0000B95D /* MovieList.swift in Sources */,
+				4FC7C72E24E177CD0073250C /* availabletime.swift in Sources */,
 				4FBEC65724C2C89700DE3240 /* CustomerProfileTab.swift in Sources */,
+				4FC7C73224E17AC70073250C /* NetworkManagerAT.swift in Sources */,
 				4F6B9DF424B2054A003DAB16 /* ProductGameTab.swift in Sources */,
 				4F13269824D0817700C644CC /* CardView.swift in Sources */,
 				4F2BE2FD24E0E8EA00A10D07 /* ListTime.swift in Sources */,
