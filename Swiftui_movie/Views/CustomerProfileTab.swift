@@ -89,6 +89,9 @@ struct CustomerProfileTab: View {
                     NavigationLink(destination: LoginM(), isActive: $activateLink,
                     label: { EmptyView() })
                     Button(action: {
+//                        UserDefaults.standard.removeObject(forKey: "username")
+//                        UserDefaults.standard.removeObject(forKey: "email")
+//                        UserDefaults.standard.removeObject(forKey: "desc")
                         
                         self.isPresented=true
                     }) {
