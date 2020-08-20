@@ -24,6 +24,7 @@
 		4F13269624D080F300C644CC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13269524D080F300C644CC /* Product.swift */; };
 		4F13269824D0817700C644CC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13269724D0817700C644CC /* CardView.swift */; };
 		4F15750624D329B80008E249 /* MedicalQusetioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F15750524D329B80008E249 /* MedicalQusetioner.swift */; };
+		4F17506B24EEB93F00E9725D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17506A24EEB93F00E9725D /* Register.swift */; };
 		4F210A3024D91AAD005B4658 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F210A2F24D91AAD005B4658 /* SplashScreen.swift */; };
 		4F210A3224D91B52005B4658 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F210A3124D91B52005B4658 /* Login.swift */; };
 		4F2BE2FD24E0E8EA00A10D07 /* ListTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2BE2FC24E0E8EA00A10D07 /* ListTime.swift */; };
@@ -71,6 +72,7 @@
 		4F13269524D080F300C644CC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4F13269724D0817700C644CC /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4F15750524D329B80008E249 /* MedicalQusetioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalQusetioner.swift; sourceTree = "<group>"; };
+		4F17506A24EEB93F00E9725D /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		4F210A2F24D91AAD005B4658 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		4F210A3124D91B52005B4658 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		4F2BE2FC24E0E8EA00A10D07 /* ListTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTime.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		4490CD2623775AD200E9BC83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F17506A24EEB93F00E9725D /* Register.swift */,
 				4F3F5AF324E1848D0018BEF9 /* ATadapter.swift */,
 				4F2BE2FC24E0E8EA00A10D07 /* ListTime.swift */,
 				4FA2073A24DDADD400991AF0 /* LoginM.swift */,
@@ -312,6 +315,7 @@
 				4FAAEBC624D1D7BB00BC5358 /* HourOffList.swift in Sources */,
 				4FC7C73024E17A2B0073250C /* atlist.swift in Sources */,
 				4F9AD8AC24D18FB8004A393B /* DayOff.swift in Sources */,
+				4F17506B24EEB93F00E9725D /* Register.swift in Sources */,
 				4F12637224D970890091A63A /* HistoryBooking.swift in Sources */,
 				44E5563722D164D80000B95D /* MovieRowApi.swift in Sources */,
 				4F13269624D080F300C644CC /* Product.swift in Sources */,
