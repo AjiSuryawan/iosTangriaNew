@@ -4,6 +4,8 @@ import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct CustomerProfileTab: View {
+    @State var DetailHistoryBooking = false
+    @State var DetailMedquest = false
     @State private var activateLink: Bool = false
     @State private var currentView: Tab = .Tab1
     @State private var showModal: Bool = false
@@ -41,7 +43,10 @@ struct CustomerProfileTab: View {
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), lineWidth: 1))
                     .padding()
-                    NavigationLink(destination: HistoryBooking()) {
+                    
+                    Button(action: {
+                        self.DetailHistoryBooking.toggle()
+                    }) {
                         VStack {
                             HStack {
                                 VStack(alignment: .center, spacing: 0) {
@@ -55,27 +60,31 @@ struct CustomerProfileTab: View {
                         .cornerRadius(10)
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)), lineWidth: 2))
                         .padding()
+                    }.sheet(isPresented: $DetailHistoryBooking) {
+                        HistoryBooking()
                     }
                     
-                    NavigationLink(destination: MedicalQusetioner()) {
+                    Button(action: {
+                        self.DetailMedquest.toggle()
+                    }) {
                         VStack {
-                            
                             HStack {
                                 VStack(alignment: .center, spacing: 0) {
-                                    
-                                    Text("Medical Questioner")
+                                    Text("Medical Questional")
                                         .foregroundColor(Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
                                         .frame(maxWidth: .infinity)
-                                    
                                 }.layoutPriority(100)
-                                
                                 Spacer()
                             }.padding()
                         }
                         .cornerRadius(10)
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)), lineWidth: 2))
                         .padding()
+                    }.sheet(isPresented: $DetailMedquest) {
+                        MedicalQusetioner()
                     }
+                    
+                    
                     
 //                    NavigationLink(destination: LoginM()) {
 //                        if self.userSettings.email.isEmpty || self.userSettings.email == ""{
