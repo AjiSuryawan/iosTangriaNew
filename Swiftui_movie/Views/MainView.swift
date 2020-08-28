@@ -15,7 +15,7 @@ struct MainView: View {
     
 
     var body: some View {
-        NavigationView {
+        //NavigationView {
             VStack {
                 CurrentScreen(currentView: self.$currentView)
                 TabBar(currentView: self.$currentView, showModal: self.$showModal)
@@ -25,7 +25,7 @@ struct MainView: View {
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.systemPink]
             })
             
-        }
+        //}
             
         .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: self.$showModal) { ProfileView() }
