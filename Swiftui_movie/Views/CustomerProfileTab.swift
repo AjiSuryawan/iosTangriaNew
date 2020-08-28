@@ -4,6 +4,7 @@ import SwiftUI
 
 // swiftlint:disable multiple_closures_with_trailing_closure
 struct CustomerProfileTab: View {
+    @State private var navBarHidden = true
     @State var DetailHistoryBooking = false
     @State var DetailMedquest = false
     @State private var activateLink: Bool = false

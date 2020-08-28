@@ -20,10 +20,12 @@ struct MainView: View {
                 CurrentScreen(currentView: self.$currentView)
                 TabBar(currentView: self.$currentView, showModal: self.$showModal)
             }
+    
             .background(NavigationConfigurator { nc in
                 nc.navigationBar.barTintColor = .white
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.systemPink]
             })
+            
             
         //}
             
