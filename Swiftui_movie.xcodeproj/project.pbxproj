@@ -41,12 +41,10 @@
 		4F74823E24D90E5F005E6264 /* Product2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74823D24D90E5F005E6264 /* Product2.swift */; };
 		4F8B083424D1B37700C34D9B /* app_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8B083324D1B37700C34D9B /* app_logo.png */; };
 		4F9AD8AC24D18FB8004A393B /* DayOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9AD8AB24D18FB8004A393B /* DayOff.swift */; };
-		4FA2073B24DDADD400991AF0 /* LoginM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2073A24DDADD400991AF0 /* LoginM.swift */; };
 		4FAAEBC424D1D6E800BC5358 /* NetworkManagerHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAEBC324D1D6E800BC5358 /* NetworkManagerHour.swift */; };
 		4FAAEBC624D1D7BB00BC5358 /* HourOffList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAEBC524D1D7BB00BC5358 /* HourOffList.swift */; };
 		4FAAEBC824D1D7F600BC5358 /* houroff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAEBC724D1D7F600BC5358 /* houroff.swift */; };
 		4FAAEBCA24D1D94100BC5358 /* RowHourOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAEBC924D1D94000BC5358 /* RowHourOff.swift */; };
-		4FAEE3C024F527EC005A68FE /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAEE3BF24F527EC005A68FE /* Register.swift */; };
 		4FBEC65724C2C89700DE3240 /* CustomerProfileTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEC65624C2C89600DE3240 /* CustomerProfileTab.swift */; };
 		4FC7C72E24E177CD0073250C /* availabletime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC7C72D24E177CD0073250C /* availabletime.swift */; };
 		4FC7C73024E17A2B0073250C /* atlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC7C72F24E17A2B0073250C /* atlist.swift */; };
@@ -89,12 +87,10 @@
 		4F74823D24D90E5F005E6264 /* Product2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product2.swift; sourceTree = "<group>"; };
 		4F8B083324D1B37700C34D9B /* app_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_logo.png; path = ../../../app_logo.png; sourceTree = "<group>"; };
 		4F9AD8AB24D18FB8004A393B /* DayOff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOff.swift; sourceTree = "<group>"; };
-		4FA2073A24DDADD400991AF0 /* LoginM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginM.swift; sourceTree = "<group>"; };
 		4FAAEBC324D1D6E800BC5358 /* NetworkManagerHour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerHour.swift; sourceTree = "<group>"; };
 		4FAAEBC524D1D7BB00BC5358 /* HourOffList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourOffList.swift; sourceTree = "<group>"; };
 		4FAAEBC724D1D7F600BC5358 /* houroff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = houroff.swift; sourceTree = "<group>"; };
 		4FAAEBC924D1D94000BC5358 /* RowHourOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowHourOff.swift; sourceTree = "<group>"; };
-		4FAEE3BF24F527EC005A68FE /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		4FBEC65624C2C89600DE3240 /* CustomerProfileTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerProfileTab.swift; sourceTree = "<group>"; };
 		4FC7C72D24E177CD0073250C /* availabletime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = availabletime.swift; sourceTree = "<group>"; };
 		4FC7C72F24E17A2B0073250C /* atlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = atlist.swift; sourceTree = "<group>"; };
@@ -129,10 +125,8 @@
 		4490CD2623775AD200E9BC83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4FAEE3BF24F527EC005A68FE /* Register.swift */,
 				4F3F5AF324E1848D0018BEF9 /* ATadapter.swift */,
 				4F2BE2FC24E0E8EA00A10D07 /* ListTime.swift */,
-				4FA2073A24DDADD400991AF0 /* LoginM.swift */,
 				4F12637124D970890091A63A /* HistoryBooking.swift */,
 				4F210A3124D91B52005B4658 /* Login.swift */,
 				4F210A2F24D91AAD005B4658 /* SplashScreen.swift */,
@@ -309,13 +303,11 @@
 				4F6B9DFC24B205D3003DAB16 /* ProfileView.swift in Sources */,
 				44E5563C22D179BA0000B95D /* MovieDetailsApi.swift in Sources */,
 				44E5563122D15F3F0000B95D /* Movie.swift in Sources */,
-				4FA2073B24DDADD400991AF0 /* LoginM.swift in Sources */,
 				4FAAEBC824D1D7F600BC5358 /* houroff.swift in Sources */,
 				4F13269424D080DF00C644CC /* Place.swift in Sources */,
 				4FAAEBC624D1D7BB00BC5358 /* HourOffList.swift in Sources */,
 				4FC7C73024E17A2B0073250C /* atlist.swift in Sources */,
 				4F9AD8AC24D18FB8004A393B /* DayOff.swift in Sources */,
-				4FAEE3C024F527EC005A68FE /* Register.swift in Sources */,
 				4F12637224D970890091A63A /* HistoryBooking.swift in Sources */,
 				44E5563722D164D80000B95D /* MovieRowApi.swift in Sources */,
 				4F13269624D080F300C644CC /* Product.swift in Sources */,

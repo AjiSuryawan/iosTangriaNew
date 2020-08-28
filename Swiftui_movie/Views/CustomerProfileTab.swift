@@ -95,8 +95,7 @@ struct CustomerProfileTab: View {
 //                            LogoutButtonContent()
                     //                        }
                     //                    }
-                    NavigationLink(destination: LoginM(), isActive: $activateLink,
-                    label: { EmptyView() })
+                    NavigationLink(destination: Login(), isActive: $activateLink, label: { EmptyView() })
                     Button(action: {
 //                        UserDefaults.standard.removeObject(forKey: "username")
 //                        UserDefaults.standard.removeObject(forKey: "email")
@@ -110,6 +109,9 @@ struct CustomerProfileTab: View {
                 .alert(isPresented: $isPresented) {
                     Alert(title: Text("Logout"), message: Text("Are you sure want to Logout ?"), primaryButton: .destructive(Text("yes")) {
                         self.unpairAndSetDefaultDeviceInformation()
+                        UserDefaults.standard.removeObject(forKey: "username")
+                        UserDefaults.standard.removeObject(forKey: "email")
+                        UserDefaults.standard.removeObject(forKey: "desc")
                         }, secondaryButton: .cancel())
                 }
             }
