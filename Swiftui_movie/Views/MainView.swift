@@ -20,6 +20,7 @@ struct MainView: View {
                 CurrentScreen(currentView: self.$currentView)
                 TabBar(currentView: self.$currentView, showModal: self.$showModal)
             }
+            .navigationBarBackButtonHidden(true)
     
             .background(NavigationConfigurator { nc in
                 nc.navigationBar.barTintColor = .white
