@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		443AA87423741DD400DD7E91 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 443AA87323741DD400DD7E91 /* Alamofire */; };
+		443AA87423741DD400DD7E91 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 443AA87323741DD400DD7E91 /* SwiftPackageProductDependency */; };
 		44E5561C22D15E670000B95D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5561B22D15E670000B95D /* AppDelegate.swift */; };
 		44E5561E22D15E670000B95D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5561D22D15E670000B95D /* SceneDelegate.swift */; };
 		44E5562222D15E690000B95D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E5562122D15E690000B95D /* Assets.xcassets */; };
@@ -17,8 +17,9 @@
 		44E5563322D1602C0000B95D /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5563222D1602C0000B95D /* MovieList.swift */; };
 		44E5563522D1605D0000B95D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5563422D1605D0000B95D /* NetworkManager.swift */; };
 		44E5563722D164D80000B95D /* MovieRowApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5563622D164D80000B95D /* MovieRowApi.swift */; };
-		44E5563A22D171B90000B95D /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 44E5563922D171B90000B95D /* URLImage */; };
+		44E5563A22D171B90000B95D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 44E5563922D171B90000B95D /* SwiftPackageProductDependency */; };
 		44E5563C22D179BA0000B95D /* MovieDetailsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5563B22D179BA0000B95D /* MovieDetailsApi.swift */; };
+		46E1F982F1FE2D7259EEA215 /* Pods_Swiftui_movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7605EBF4136D575BD1B48A /* Pods_Swiftui_movie.framework */; };
 		4F12637224D970890091A63A /* HistoryBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12637124D970890091A63A /* HistoryBooking.swift */; };
 		4F13269424D080DF00C644CC /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13269324D080DF00C644CC /* Place.swift */; };
 		4F13269624D080F300C644CC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13269524D080F300C644CC /* Product.swift */; };
@@ -96,6 +97,9 @@
 		4FC7C72F24E17A2B0073250C /* atlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = atlist.swift; sourceTree = "<group>"; };
 		4FC7C73124E17AC70073250C /* NetworkManagerAT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerAT.swift; sourceTree = "<group>"; };
 		4FFFCD8D24C7C51600EF880F /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		5D7605EBF4136D575BD1B48A /* Pods_Swiftui_movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftui_movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37A8C0567E6F17B769217C0 /* Pods-Swiftui_movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftui_movie.debug.xcconfig"; path = "Target Support Files/Pods-Swiftui_movie/Pods-Swiftui_movie.debug.xcconfig"; sourceTree = "<group>"; };
+		D56E197C9F5013CF44C595AD /* Pods-Swiftui_movie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftui_movie.release.xcconfig"; path = "Target Support Files/Pods-Swiftui_movie/Pods-Swiftui_movie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E5563A22D171B90000B95D /* URLImage in Frameworks */,
-				443AA87423741DD400DD7E91 /* Alamofire in Frameworks */,
+				44E5563A22D171B90000B95D /* BuildFile in Frameworks */,
+				443AA87423741DD400DD7E91 /* BuildFile in Frameworks */,
+				46E1F982F1FE2D7259EEA215 /* Pods_Swiftui_movie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +164,8 @@
 			children = (
 				44E5561A22D15E670000B95D /* Swiftui_movie */,
 				44E5561922D15E670000B95D /* Products */,
+				86E418DFF9DCE6F88BCEFBB8 /* Pods */,
+				C31C14DF96F2F385BF991DD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +215,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		86E418DFF9DCE6F88BCEFBB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C37A8C0567E6F17B769217C0 /* Pods-Swiftui_movie.debug.xcconfig */,
+				D56E197C9F5013CF44C595AD /* Pods-Swiftui_movie.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C31C14DF96F2F385BF991DD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D7605EBF4136D575BD1B48A /* Pods_Swiftui_movie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44E5562C22D15E690000B95D /* Build configuration list for PBXNativeTarget "Swiftui_movie" */;
 			buildPhases = (
+				D3EC1DC3BCA6A31367D36877 /* [CP] Check Pods Manifest.lock */,
 				44E5561422D15E670000B95D /* Sources */,
 				44E5561522D15E670000B95D /* Frameworks */,
 				44E5561622D15E670000B95D /* Resources */,
+				D82E968D184CFDB58F016A80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,8 +252,8 @@
 			);
 			name = Swiftui_movie;
 			packageProductDependencies = (
-				44E5563922D171B90000B95D /* URLImage */,
-				443AA87323741DD400DD7E91 /* Alamofire */,
+				44E5563922D171B90000B95D /* SwiftPackageProductDependency */,
+				443AA87323741DD400DD7E91 /* SwiftPackageProductDependency */,
 			);
 			productName = Swiftui_movie;
 			productReference = 44E5561822D15E670000B95D /* Tangria Spa.app */;
@@ -257,8 +284,8 @@
 			);
 			mainGroup = 44E5560F22D15E670000B95D;
 			packageReferences = (
-				44E5563822D171B90000B95D /* XCRemoteSwiftPackageReference "url-image" */,
-				443AA87223741DD400DD7E91 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				44E5563822D171B90000B95D /* RemoteSwiftPackageReference */,
+				443AA87223741DD400DD7E91 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 44E5561922D15E670000B95D /* Products */;
 			projectDirPath = "";
@@ -282,6 +309,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D3EC1DC3BCA6A31367D36877 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swiftui_movie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D82E968D184CFDB58F016A80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swiftui_movie/Pods-Swiftui_movie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swiftui_movie/Pods-Swiftui_movie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swiftui_movie/Pods-Swiftui_movie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44E5561422D15E670000B95D /* Sources */ = {
@@ -458,6 +527,7 @@
 		};
 		44E5562D22D15E690000B95D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C37A8C0567E6F17B769217C0 /* Pods-Swiftui_movie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -478,6 +548,7 @@
 		};
 		44E5562E22D15E690000B95D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D56E197C9F5013CF44C595AD /* Pods-Swiftui_movie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -520,7 +591,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		443AA87223741DD400DD7E91 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		443AA87223741DD400DD7E91 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
@@ -528,7 +599,7 @@
 				minimumVersion = 4.9.1;
 			};
 		};
-		44E5563822D171B90000B95D /* XCRemoteSwiftPackageReference "url-image" */ = {
+		44E5563822D171B90000B95D /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
 			requirement = {
@@ -539,14 +610,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		443AA87323741DD400DD7E91 /* Alamofire */ = {
+		443AA87323741DD400DD7E91 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 443AA87223741DD400DD7E91 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 443AA87223741DD400DD7E91 /* RemoteSwiftPackageReference */;
 			productName = Alamofire;
 		};
-		44E5563922D171B90000B95D /* URLImage */ = {
+		44E5563922D171B90000B95D /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 44E5563822D171B90000B95D /* XCRemoteSwiftPackageReference "url-image" */;
+			package = 44E5563822D171B90000B95D /* RemoteSwiftPackageReference */;
 			productName = URLImage;
 		};
 /* End XCSwiftPackageProductDependency section */
