@@ -35,6 +35,11 @@ struct ListTime: View {
                 Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
                 .padding()
                 //koding ambil tanggal
+                List {
+                    Text("Hello World")
+                    Text("Hello World")
+                    Text("Hello World")
+                }
             }
                 
                 
