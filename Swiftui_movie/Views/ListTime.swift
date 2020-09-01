@@ -10,21 +10,12 @@ import Foundation
 import SwiftUI
 
 struct ListTime: View {
-    var dateFormatter: DateFormatter{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        return dateFormatter
-    }
-    @State private var pickedDate = Date()
-    
-    
+    @State var selectedDate = Date()
     var body: some View {
         VStack {
-            //Text("\(dateFormatter.string(from: pickedDate))")
-            
-            DatePicker(selection: $pickedDate, in: ClosedRange(uncheckedBounds: (lower: Date(), upper: Date(timeIntervalSinceNow: 9000000))), displayedComponents: .date, label: {
-                EmptyView()
-                }).labelsHidden().padding()
+            Form {
+                DatePicker("When is your birthday?", selection: $selectedDate, displayedComponents: .date)
+            }
             
             Button(action: { }, label: {
               Text("Get Available Time")
