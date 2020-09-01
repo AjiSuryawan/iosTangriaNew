@@ -19,7 +19,7 @@ struct ListTime: View {
     @State var selectedDate = Date()
     var body: some View {
         VStack {
-            Spacer()
+            
             Button(action: { self.singleIsPresented.toggle() }) {
                 Text("Pilih Tanggal").foregroundColor(.blue)
             }.padding()
@@ -53,10 +53,11 @@ struct ListTime: View {
                 .foregroundColor(.white)
                 .padding()
                 
-                .background(Color.green)
-                .cornerRadius(15.0)
+                    .background(Color.green)
+                    .cornerRadius(15.0)
             }.padding()
         }
+        .padding()
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(.white))
         .navigationBarTitle("Available Time",displayMode: .inline)
