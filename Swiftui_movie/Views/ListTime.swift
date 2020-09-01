@@ -10,6 +10,11 @@ import Foundation
 import SwiftUI
 
 struct ListTime: View {
+    
+    @State private var countryindex = 0
+    
+    var countries = ["10.00", "11.00" , "13.00", "14.00", "16.00" , "18.00"];
+    
     @State var singleIsPresented = false
     var rkManager1 = RKManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0)
 
@@ -21,8 +26,9 @@ struct ListTime: View {
         VStack {
             
             Button(action: { self.singleIsPresented.toggle() }) {
-                Text("Pilih Tanggal").foregroundColor(.blue)
-            }.padding()
+                Text("Silahkan Pilih Tanggal").foregroundColor(.blue)
+            }
+            .padding()
             .background(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 2))
             .sheet(isPresented: self.$singleIsPresented, content: {
                 RKViewController(isPresented: self.$singleIsPresented, rkManager: self.rkManager1)}
@@ -33,32 +39,38 @@ struct ListTime: View {
                 
             }else{
                 Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
-                .padding()
+                    .padding()
                 //koding ambil tanggal
-                List {
-                    Text("Hello World")
-                    Text("Hello World")
-                    Text("Hello World")
+                Text("jam yang anda pilih : "+self.countries[countryindex])
+                Picker (selection: $countryindex, label: EmptyView()) {
+                    ForEach(0..<countries.count) {
+                        Text(self.countries[$0])
+                            .tag($0)
+                            
+                    }
                 }
+                
+                
+                
+                Button(action: {
+                    print("Book Now")
+                }) {
+                    Text("Book Now")
+                        
+                        .frame(maxWidth: .infinity)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.green)
+                        .cornerRadius(15.0)
+                }.disabled(countryindex < 0)
             }
                 
                 
-            Button(action: {
-                print("Book Now")
-            }) {
-                Text("Book Now")
-                
-                .frame(maxWidth: .infinity)
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
-                
-                    .background(Color.green)
-                    .cornerRadius(15.0)
-            }.padding()
+            
         }
         .padding()
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
         .background(Color(.white))
         .navigationBarTitle("Available Time",displayMode: .inline)
         .onAppear(perform: startUp)
