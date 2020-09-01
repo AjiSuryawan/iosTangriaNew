@@ -29,7 +29,7 @@ struct ListTime: View {
             )
             
             
-            Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
+            Text(self.getTextFromDate(date: self.rkManager1.selectedDate)).padding()
             
             List {
                 Text("Hello World")
@@ -82,7 +82,7 @@ struct ListTime: View {
     func getTextFromDate(date: Date!) -> String {
         let formatter = DateFormatter()
         formatter.locale = .current
-        formatter.dateFormat = "EEEE, MMMM d, yyyy"
+        formatter.dateFormat = "EEEE, dd MMMM yyyy"
         return date == nil ? "" : formatter.string(from: date)
     }
     
