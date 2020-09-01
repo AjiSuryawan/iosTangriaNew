@@ -27,15 +27,10 @@ struct ListTime: View {
             .sheet(isPresented: self.$singleIsPresented, content: {
                 RKViewController(isPresented: self.$singleIsPresented, rkManager: self.rkManager1)}
             )
-            
-            
-            Text(self.getTextFromDate(date: self.rkManager1.selectedDate)).padding()
-            
-            List {
-                Text("Hello World")
-                Text("Hello World")
-                Text("Hello World")
-            }
+            Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
+                .padding()
+                
+                
             Button(action: {
                 print("Book Now")
             }) {
@@ -49,14 +44,13 @@ struct ListTime: View {
                 .background(Color.green)
                 .cornerRadius(15.0)
             }.padding()
-
-
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .background(Color(.white))
         .navigationBarTitle("Available Time",displayMode: .inline)
         .onAppear(perform: startUp)
         .navigationViewStyle(StackNavigationViewStyle())
+        
         
     }
     func startUp() {
