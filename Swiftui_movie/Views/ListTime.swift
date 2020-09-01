@@ -27,8 +27,15 @@ struct ListTime: View {
             .sheet(isPresented: self.$singleIsPresented, content: {
                 RKViewController(isPresented: self.$singleIsPresented, rkManager: self.rkManager1)}
             )
-            Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
+            
+            
+            if self.getTextFromDate(date: self.rkManager1.selectedDate) == "kosongan" {
+                
+            }else{
+                Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
                 .padding()
+                //koding ambil tanggal
+            }
                 
                 
             Button(action: {
@@ -77,7 +84,7 @@ struct ListTime: View {
         let formatter = DateFormatter()
         formatter.locale = .current
         formatter.dateFormat = "EEEE, dd MMMM yyyy"
-        return date == nil ? "" : formatter.string(from: date)
+        return date == nil ? "kosongan" : formatter.string(from: date)
     }
     
 }
