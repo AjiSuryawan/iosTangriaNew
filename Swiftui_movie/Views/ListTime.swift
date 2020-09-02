@@ -41,7 +41,7 @@ struct ListTime: View {
                             Text(self.countries[$0])
                                 .tag($0)
                         }
-                    }
+                    }.labelsHidden()
                     Button(action: {
                         print("Book Now")
                         self.isAlert = true
@@ -58,7 +58,7 @@ struct ListTime: View {
                 }
             }
             .padding()
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             .background(Color(.white))
             .navigationBarTitle("Available Time",displayMode: .inline)
             .onAppear(perform: startUp)
