@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 struct ListTime: View {
+    @State var statusambiljam = true
     @State var isPresented = false
     @State private var showDetails = false
     @State private var isAlert = false
@@ -35,39 +36,61 @@ struct ListTime: View {
                     if self.getTextFromDate(date: self.rkManager1.selectedDate) == "kosongan" {
                         
                     }else{
-                        Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
-                            .padding()
-                        //koding ambil tanggal
-                        Text("jam yang anda pilih : "+self.countries[self.countryindex])
-                        Picker (selection: self.$countryindex, label: EmptyView()) {
-                            ForEach(0..<self.countries.count) {
-                                Text(self.countries[$0])
-                                    .tag($0)
-                            }
-                        }.labelsHidden()
-                        Button(action: {
-                            self.isPresented=true
-                            print("Book Now")
-                            //self.showDetails = true
-                            //self.isAlert = true
-                            
-                        }) {
-                            Text("Book Now")
+                        if self.statusambiljam {
+                            Text("Loading ...")
+                            .foregroundColor(Color.pink)
+                            .bold()
+                            Button(action: {
+                                self.statusambiljam=false
+                                print("Book Now")
+                                //self.showDetails = true
+                                //self.isAlert = true
                                 
-                                .frame(maxWidth: .infinity)
-                                .font(.headline)
-                                .foregroundColor(.white)
+                            }) {
+                                Text("change")
+                                    
+                                    .frame(maxWidth: .infinity)
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.green)
+                                    .cornerRadius(15.0)
+                            }
+                        }else{
+                            Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
                                 .padding()
-                                .background(Color.green)
-                                .cornerRadius(15.0)
-                        }.disabled(self.countryindex < 0)
-                        .alert(isPresented: self.$isPresented) {
-                            Alert(title: Text("Confirm Booking"), message: Text("Apakah anda yakin ingin booking ?"), primaryButton: .destructive(Text("yes")) {
-                                self.showDetails = true
-                                //proses network
-                                //jika selesai muncul alert oke saja, info cek di booking
-                                //jika salah muncul alert lagi
-                                }, secondaryButton: .cancel())
+                            //koding ambil tanggal
+                            Text("jam yang anda pilih : "+self.countries[self.countryindex])
+                            Picker (selection: self.$countryindex, label: EmptyView()) {
+                                ForEach(0..<self.countries.count) {
+                                    Text(self.countries[$0])
+                                        .tag($0)
+                                }
+                            }.labelsHidden()
+                            Button(action: {
+                                self.isPresented=true
+                                print("Book Now")
+                                //self.showDetails = true
+                                //self.isAlert = true
+                                
+                            }) {
+                                Text("Book Now")
+                                    
+                                    .frame(maxWidth: .infinity)
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.green)
+                                    .cornerRadius(15.0)
+                            }.disabled(self.countryindex < 0)
+                            .alert(isPresented: self.$isPresented) {
+                                Alert(title: Text("Confirm Booking"), message: Text("Apakah anda yakin ingin booking ?"), primaryButton: .destructive(Text("yes")) {
+                                    self.showDetails = true
+                                    //proses network
+                                    //jika selesai muncul alert oke saja, info cek di booking
+                                    //jika salah muncul alert lagi
+                                    }, secondaryButton: .cancel())
+                            }
                         }
                     }
                 }
