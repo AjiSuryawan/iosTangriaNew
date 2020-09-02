@@ -43,11 +43,9 @@ struct CustomerProfileTab: View {
                     }
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), lineWidth: 1))
-                    .padding()
+                    //.padding()
                     
-                    Button(action: {
-                        self.DetailHistoryBooking.toggle()
-                    }) {
+                    NavigationLink(destination: HistoryBooking()) {
                         VStack {
                             HStack {
                                 VStack(alignment: .center, spacing: 0) {
@@ -60,14 +58,50 @@ struct CustomerProfileTab: View {
                         }
                         .cornerRadius(10)
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)), lineWidth: 2))
-                        .padding()
-                    }.sheet(isPresented: $DetailHistoryBooking) {
-                        HistoryBooking()
-                    }
+                        
+                    }.padding()
                     
-                    Button(action: {
-                        self.DetailMedquest.toggle()
-                    }) {
+//                    Button(action: {
+//                        self.DetailHistoryBooking.toggle()
+//                    }) {
+//                        VStack {
+//                            HStack {
+//                                VStack(alignment: .center, spacing: 0) {
+//                                    Text("History Booking")
+//                                        .foregroundColor(Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
+//                                        .frame(maxWidth: .infinity)
+//                                }.layoutPriority(100)
+//                                Spacer()
+//                            }.padding()
+//                        }
+//                        .cornerRadius(10)
+//                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)), lineWidth: 2))
+//                        .padding()
+//                    }.sheet(isPresented: $DetailHistoryBooking) {
+//                        HistoryBooking()
+//                    }
+                    
+//                    Button(action: {
+//                        self.DetailMedquest.toggle()
+//                    }) {
+//                        VStack {
+//                            HStack {
+//                                VStack(alignment: .center, spacing: 0) {
+//                                    Text("Medical Questional")
+//                                        .foregroundColor(Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
+//                                        .frame(maxWidth: .infinity)
+//                                }.layoutPriority(100)
+//                                Spacer()
+//                            }.padding()
+//                        }
+//                        .cornerRadius(10)
+//                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)), lineWidth: 2))
+//                        .padding()
+//                    }.sheet(isPresented: $DetailMedquest) {
+//                        MedicalQusetioner()
+//                    }
+                    
+                    NavigationLink(destination: MedicalQusetioner()) {
                         VStack {
                             HStack {
                                 VStack(alignment: .center, spacing: 0) {
@@ -81,10 +115,7 @@ struct CustomerProfileTab: View {
                         .cornerRadius(10)
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)), lineWidth: 2))
                         .padding()
-                    }.sheet(isPresented: $DetailMedquest) {
-                        MedicalQusetioner()
                     }
-                    
                     
                     
 //                    NavigationLink(destination: LoginM()) {
@@ -107,6 +138,7 @@ struct CustomerProfileTab: View {
                         LogoutButtonContent()
                     }
                 }
+                .padding()
                 .alert(isPresented: $isPresented) {
                     Alert(title: Text("Logout"), message: Text("Are you sure want to Logout ?"), primaryButton: .destructive(Text("yes")) {
                         self.unpairAndSetDefaultDeviceInformation()
@@ -135,12 +167,14 @@ struct CustomerProfileTab: View {
     struct LogoutButtonContent: View {
         var body: some View {
             Text("Log Out")
+                .bold()
                 .font(.headline)
-                .foregroundColor(.white)
+                .foregroundColor(.red)
                 .padding()
-                .frame(width: 220, height: 60)
-                .background(Color.black)
+                .frame(width: 200, height: 50)
+                //.background(Color.black)
                 .cornerRadius(35.0)
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)), lineWidth: 2))
         }
     }
     
