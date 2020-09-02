@@ -27,12 +27,10 @@ struct MovieDetailsApi : View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .padding(.bottom)
-                            
                         }
                         Text(movie.name)
                             .font(.title)
                             .foregroundColor(Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
-                        
                     }
                     .cornerRadius(2)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), lineWidth: 1))
@@ -42,29 +40,37 @@ struct MovieDetailsApi : View {
                         .foregroundColor(.green)
                         .padding()
                     Spacer()
-                    
                     Text(movie.description)
                         .foregroundColor(.black)
                         .padding()
                     Spacer()
-                    Button(action: {
-                        self.isPresented.toggle()
-                        print("Button action")
-                    }) {
+                    NavigationLink(destination: ListTime()) {
                         Text("Book Now")
-                            
                             .frame(maxWidth: .infinity)
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding()
-                            
                             .background(Color.green)
                             .cornerRadius(15.0)
                     }.padding()
+                    
+//                    Button(action: {
+//                        self.isPresented.toggle()
+//                        print("Button action")
+//                    }) {
+//                        Text("Book Now")
+//                            .frame(maxWidth: .infinity)
+//                            .font(.headline)
+//                            .foregroundColor(.white)
+//                            .padding()
+//                            .background(Color.green)
+//                            .cornerRadius(15.0)
+//                    }.padding()
                     Spacer()
-                }.sheet(isPresented: $isPresented) {
-                    ListTime()
                 }
+//                .sheet(isPresented: $isPresented) {
+//                    ListTime()
+//                }
             }
             
         }
