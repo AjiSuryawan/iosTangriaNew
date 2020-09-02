@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 struct ListTime: View {
+    @State var isPresented = false
     @State private var showDetails = false
     @State private var isAlert = false
     @State private var countryindex = 0
@@ -45,8 +46,9 @@ struct ListTime: View {
                             }
                         }.labelsHidden()
                         Button(action: {
+                            self.isPresented=true
                             print("Book Now")
-                            self.showDetails = true
+                            //self.showDetails = true
                             //self.isAlert = true
                             
                         }) {
@@ -59,6 +61,14 @@ struct ListTime: View {
                                 .background(Color.green)
                                 .cornerRadius(15.0)
                         }.disabled(self.countryindex < 0)
+                        .alert(isPresented: self.$isPresented) {
+                            Alert(title: Text("Confirm Booking"), message: Text("Apakah anda yakin ingin booking ?"), primaryButton: .destructive(Text("yes")) {
+                                self.showDetails = true
+                                //proses network
+                                //jika selesai muncul alert oke saja, info cek di booking
+                                //jika salah muncul alert lagi
+                                }, secondaryButton: .cancel())
+                        }
                     }
                 }
                 .padding()
