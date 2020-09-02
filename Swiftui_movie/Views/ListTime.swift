@@ -10,7 +10,9 @@ import Foundation
 import SwiftUI
 
 struct ListTime: View {
-    @State var statusambiljam = true
+    var id: Int
+    var name: String
+    @State var statusambiljam = false
     @State var isPresented = false
     @State private var showDetails = false
     @State private var isAlert = false
@@ -40,22 +42,23 @@ struct ListTime: View {
                             Text("Loading ...")
                             .foregroundColor(Color.pink)
                             .bold()
-                            Button(action: {
-                                self.statusambiljam=false
-                                print("Book Now")
-                                //self.showDetails = true
-                                //self.isAlert = true
-                                
-                            }) {
-                                Text("change")
-                                    
-                                    .frame(maxWidth: .infinity)
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .background(Color.green)
-                                    .cornerRadius(15.0)
-                            }
+                            //NETWORKING DISINI, KALAU SUKSES NGUBAH STATUS
+//                            Button(action: {
+//                                self.statusambiljam=false
+//                                print("Book Now")
+//                                //self.showDetails = true
+//                                //self.isAlert = true
+//
+//                            }) {
+//                                Text("change")
+//
+//                                    .frame(maxWidth: .infinity)
+//                                    .font(.headline)
+//                                    .foregroundColor(.white)
+//                                    .padding()
+//                                    .background(Color.green)
+//                                    .cornerRadius(15.0)
+//                            }
                         }else{
                             Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
                                 .padding()
@@ -69,7 +72,8 @@ struct ListTime: View {
                             }.labelsHidden()
                             Button(action: {
                                 self.isPresented=true
-                                print("Book Now")
+                                print("Book Now : "+String(self.id)+" "+self.name)
+                                
                                 //self.showDetails = true
                                 //self.isAlert = true
                                 
@@ -184,8 +188,8 @@ struct ListTime: View {
 
 
 
-struct ListTime_Previews: PreviewProvider {
-    static var previews: some View {
-        ListTime()
-    }
-}
+//struct ListTime_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListTime()
+//    }
+//}

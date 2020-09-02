@@ -44,7 +44,7 @@ struct MovieDetailsApi : View {
                         .foregroundColor(.black)
                         .padding()
                     Spacer()
-                    NavigationLink(destination: ListTime()) {
+                    NavigationLink(destination: ListTime(id: movie.id, name: movie.name)) {
                         Text("Book Now")
                             .frame(maxWidth: .infinity)
                             .font(.headline)
