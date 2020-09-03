@@ -10,9 +10,10 @@ import Foundation
 import SwiftUI
 
 struct ListTime: View {
+    @ObservedObject var networkManager = NetworkManagerAT()
     var id: Int
     var name: String
-    @State var statusambiljam = false
+    //@State var statusambiljam = false
     @State var isPresented = false
     @State private var showDetails = false
     @State private var isAlert = false
@@ -38,11 +39,14 @@ struct ListTime: View {
                     if self.getTextFromDate(date: self.rkManager1.selectedDate) == "kosongan" {
                         
                     }else{
-                        if self.statusambiljam {
+                        if self.networkManager.loading {
                             Text("Loading ...")
                             .foregroundColor(Color.pink)
                             .bold()
                             //NETWORKING DISINI, KALAU SUKSES NGUBAH STATUS
+                            
+                            
+                            
 //                            Button(action: {
 //                                self.statusambiljam=false
 //                                print("Book Now")
@@ -62,14 +66,23 @@ struct ListTime: View {
                         }else{
                             Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
                                 .padding()
-                            //koding ambil tanggal
-                            Text("jam yang anda pilih : "+self.countries[self.countryindex])
-                            Picker (selection: self.$countryindex, label: EmptyView()) {
-                                ForEach(0..<self.countries.count) {
-                                    Text(self.countries[$0])
-                                        .tag($0)
-                                }
-                            }.labelsHidden()
+                            
+                            List(self.networkManager.movies.result) { movie in
+                                ATadapter(movie: movie)
+                                
+                            }.onAppear {
+                                UITableView.appearance().separatorStyle = .none
+                            }
+                            
+//                            Text("jam yang anda pilih : "+self.countries[self.countryindex])
+//                            Picker (selection: self.$countryindex, label: EmptyView()) {
+//                                ForEach(0..<self.countries.count) {
+//                                    Text(self.countries[$0])
+//                                        .tag($0)
+//                                }
+//                            }.labelsHidden()
+                            
+                            
                             Button(action: {
                                 self.isPresented=true
                                 print("Book Now : "+String(self.id)+" "+self.name)
