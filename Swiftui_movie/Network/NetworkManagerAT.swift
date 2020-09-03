@@ -19,7 +19,7 @@ class NetworkManagerAT: ObservableObject {
     
     init() {
 		loading = true
-		loadDataByAlamofireAT(date: "2020-09-17", ordername: "Tangria Hot Stones")
+		//loadDataByAlamofireAT(date: "2020-09-17", ordername: "Tangria Hot Stones")
 	}
 	
 //	private func loadDataNormal() {
@@ -34,7 +34,7 @@ class NetworkManagerAT: ObservableObject {
 //		}.resume()
 //	}
 	
-    private func loadDataByAlamofireAT(date : String , ordername : String) {
+    public func loadDataByAlamofireAT(date : String , ordername : String) {
         let url = URL(string: "https://api-ios.admin.tangriaspa.com/api/available-time")
         let bodi: [String : String] = ["date" : date ,"ordername" : ordername]
         

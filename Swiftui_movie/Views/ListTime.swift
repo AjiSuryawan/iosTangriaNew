@@ -41,6 +41,11 @@ struct ListTime: View {
                             Text("Loading ...")
                             .foregroundColor(Color.pink)
                             .bold()
+                            .onAppear {
+                                print("ContentView appeared!")
+                                self.networkManager.loadDataByAlamofireAT(date: "2020-09-17", ordername: "Tangria Hot Stones")
+                            }
+                            
                             //NETWORKING DISINI, KALAU SUKSES NGUBAH STATUS
                             
                             
