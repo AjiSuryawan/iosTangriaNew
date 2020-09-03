@@ -13,12 +13,9 @@ struct ListTime: View {
     @ObservedObject var networkManager = NetworkManagerAT()
     var id: Int
     var name: String
-    //@State var statusambiljam = false
     @State var isPresented = false
     @State private var showDetails = false
     @State private var isAlert = false
-    @State private var countryindex = 0
-    var countries = ["10.00", "11.00" , "13.00", "14.00", "16.00" , "18.00"];
     @State var singleIsPresented = false
     var rkManager1 = RKManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0)
     var rkManager3 = RKManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 3)
@@ -67,22 +64,14 @@ struct ListTime: View {
                             Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
                                 .padding()
                             
+                            
+                            
                             List(self.networkManager.movies.result) { movie in
                                 ATadapter(movie: movie)
                                 
                             }.onAppear {
                                 UITableView.appearance().separatorStyle = .none
                             }
-                            
-//                            Text("jam yang anda pilih : "+self.countries[self.countryindex])
-//                            Picker (selection: self.$countryindex, label: EmptyView()) {
-//                                ForEach(0..<self.countries.count) {
-//                                    Text(self.countries[$0])
-//                                        .tag($0)
-//                                }
-//                            }.labelsHidden()
-                            
-                            
                             Button(action: {
                                 self.isPresented=true
                                 print("Book Now : "+String(self.id)+" "+self.name)
@@ -99,7 +88,7 @@ struct ListTime: View {
                                     .padding()
                                     .background(Color.green)
                                     .cornerRadius(15.0)
-                            }.disabled(self.countryindex < 0)
+                            }.disabled(true)
                             .alert(isPresented: self.$isPresented) {
                                 Alert(title: Text("Confirm Booking"), message: Text("Apakah anda yakin ingin booking ?"), primaryButton: .destructive(Text("yes")) {
                                     self.showDetails = true
