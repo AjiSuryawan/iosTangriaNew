@@ -13,12 +13,12 @@ import Combine
 class NetworkManagerAT: ObservableObject {
     
 	@Published var movies = atlist(result: [])
-	@Published var loading = false
+	
     
     let api_url_base = "https://api-ios.admin.tangriaspa.com/api/available-time"
     
     init() {
-		loading = true
+		
 		//loadDataByAlamofireAT(date: "2020-09-17", ordername: "Tangria Hot Stones")
 	}
 	
@@ -46,12 +46,12 @@ class NetworkManagerAT: ObservableObject {
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if error == nil, let data = data, let response = response as? HTTPURLResponse {
-                print("Content-Type: \(response.allHeaderFields["Content-Type"] ?? "")")
-                print("statusCode: \(response.statusCode)")
+                //print("Content-Type: \(response.allHeaderFields["Content-Type"] ?? "")")
+                //print("statusCode: \(response.statusCode)")
                 let movies = try! JSONDecoder().decode(atlist.self, from: data)
                 DispatchQueue.main.async {
                     self.movies = movies
-                    self.loading = false
+                    
                 }
             } else {
                 

@@ -26,7 +26,10 @@ struct ListTime: View {
         LoadingView(isShowing: .constant(showDetails)) {
             ZStack{
                 VStack {
-                    Button(action: { self.singleIsPresented.toggle() }) {
+                    Button(action: {
+                        self.singleIsPresented.toggle()
+                        
+                    }) {
                         Text("Silahkan Pilih Tanggal").foregroundColor(.blue)
                     }
                     .padding()
@@ -37,13 +40,17 @@ struct ListTime: View {
                     if self.getTextFromDate(date: self.rkManager1.selectedDate) == "kosongan" {
                         
                     }else{
-                        if self.networkManager.loading {
+                        
+                        if true {
                             Text("Loading ...")
                             .foregroundColor(Color.pink)
                             .bold()
                             .onAppear {
                                 print("ContentView appeared!")
                                 self.networkManager.loadDataByAlamofireAT(date: "2020-09-17", ordername: "Tangria Hot Stones")
+                                
+                            }.onDisappear{
+                                print("ngilang")
                             }
                             
                             //NETWORKING DISINI, KALAU SUKSES NGUBAH STATUS
@@ -69,7 +76,6 @@ struct ListTime: View {
                         }else{
                             Text(self.getTextFromDate(date: self.rkManager1.selectedDate))
                                 .padding()
-                            
                             Text("jam yang anda pilih : "+self.networkManager.movies.result[self.countryindex].time)
                             Picker (selection: self.$countryindex, label: EmptyView()) {
                                 ForEach(0..<self.networkManager.movies.result.count) {
