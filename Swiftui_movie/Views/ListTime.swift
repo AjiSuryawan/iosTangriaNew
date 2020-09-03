@@ -52,7 +52,7 @@ struct ListTime: View {
                         .padding()
                         .background(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 2))
                         if self.isedit {
-                            Text("jam nya : ")
+                            Text("jam nya")
                             .padding()
                         }else{
                             
