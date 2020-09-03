@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 struct ListTime: View {
+    @State private var countryindex = 0
     @ObservedObject var networkManager = NetworkManagerAT()
     var id: Int
     var name: String
@@ -52,8 +53,7 @@ struct ListTime: View {
                         .padding()
                         .background(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 2))
                         if self.isedit {
-                            Text("jam nya")
-                            .padding()
+                            
                         }else{
                             
                         }
