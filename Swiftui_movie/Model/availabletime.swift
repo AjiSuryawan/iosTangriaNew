@@ -11,5 +11,4 @@ import Foundation
 struct availabletime: Decodable, Identifiable {
 	var id: Int
 	var time: String
-	//var available: Bool
 }
